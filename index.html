@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3d0a12">
+  <meta name="description" content="Un calendario de adviento hecho con mucho cariño">
+  <title>Calendario de Adviento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="nieve" id="nieve" aria-hidden="true"></div>
+
+  <main class="contenedor">
+    <header class="cabecera">
+      <div class="adorno" aria-hidden="true">✦ &nbsp; ❄ &nbsp; ✦</div>
+      <h1 id="titulo">Calendario de Adviento</h1>
+      <p class="subtitulo" id="subtitulo"></p>
+      <p class="estado" id="estado"></p>
+
+      <div class="progreso">
+        <div class="progreso-texto" id="progresoTexto"></div>
+        <div class="progreso-barra" role="progressbar" aria-label="Puertas abiertas" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0" id="progresoBarra">
+          <div class="progreso-relleno" id="progresoRelleno"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="rejilla" id="rejilla" aria-label="Puertas del calendario"></section>
+
+    <section class="final" id="final" hidden>
+      <div class="final-brillo" aria-hidden="true">✦</div>
+      <h2>Feliz Navidad</h2>
+      <p id="mensajeFinal"></p>
+      <div class="final-corazon" aria-hidden="true">❤</div>
+    </section>
+
+    <footer class="pie">
+      Hecho con <span aria-label="amor">❤</span> para ti · Diciembre <span id="anioPie"></span>
+    </footer>
+  </main>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <script src="contenido.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
